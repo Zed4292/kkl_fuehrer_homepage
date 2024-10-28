@@ -27,10 +27,13 @@ jobs:
         with:
           submodules: 'recursive'
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: v10.9.0
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
 
       - name: Build Node assets
         env:
