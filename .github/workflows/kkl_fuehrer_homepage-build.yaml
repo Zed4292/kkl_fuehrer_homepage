@@ -23,27 +23,27 @@ build-project:
   name: build kklION
   runs-on: ubuntu-latest
 
-  steps:
-      - name: checkout
-        uses: actions/checkout@v4
-        with: 
-          submodules: 'recursive'
+    steps:
+        - name: checkout
+          uses: actions/checkout@v4
+          with: 
+            submodules: 'recursive'
 
-     - name: Setup Node
-        uses: actions/setup-node@v4
-        with: 
-          node-version: v16.x
+      - name: Setup Node
+          uses: actions/setup-node@v4
+          with: 
+            node-version: v16.x
 
-     - name: Install dependencies
-        run: npm install # Install dependencies
+      - name: Install dependencies
+          run: npm install # Install dependencies
 
-     - name: Build Node assets
-       env:
-             CI: true
-             SITE_URL: ${{ inputs.site-url }}
-        run: |
-             npm ci
-             npm run build
+      - name: Build Node assets
+        env:
+              CI: true
+              SITE_URL: ${{ inputs.site-url }}
+          run: |
+              npm ci
+              npm run build
 
 # Please do not touch the following action
       - name: Store deployment content
