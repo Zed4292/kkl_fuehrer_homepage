@@ -11,65 +11,54 @@
       </v-col>
 
       <v-col class="mb-4">
-        <h1 class="display-2 font-weight-bold mb-3">
-          Welcome to the Vuetify 3 Beta
-        </h1>
-
-        <p class="subheading font-weight-regular">
-          For help and collaboration with other Vuetify developers,
-          <br />please join our online
-          <a href="https://community.vuetifyjs.com" target="_blank"
-            >Discord Community</a
-          >
-        </p>
-      </v-col>
-
-      <v-col class="mb-5" cols="12">
-        <h2 class="headline font-weight-bold mb-5">What's next?</h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(next, i) in whatsNext"
-            :key="i"
-            :href="next.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ next.text }}
-          </a>
-        </v-row>
-      </v-col>
-
-      <v-col class="mb-5" cols="12">
-        <h2 class="headline font-weight-bold mb-5">Important Links</h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(link, i) in importantLinks"
-            :key="i"
-            :href="link.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ link.text }}
-          </a>
-        </v-row>
-      </v-col>
-
-      <v-col class="mb-5" cols="12">
-        <h2 class="headline font-weight-bold mb-5">Ecosystem</h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(eco, i) in ecosystem"
-            :key="i"
-            :href="eco.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ eco.text }}
-          </a>
-        </v-row>
+        <v-card
+          color="primary"
+          class="mx-auto"
+          prepend-icon="mdi-web-clock"
+          subtitle="The #1 Vue UI Library"
+          width="800"
+        >
+          <template v-slot:title>
+            <span class="font-weight-black">
+              Willkommen bei Kälte Klima Lüftungstechnik
+            </span>
+          </template>
+          <template v-slot:subtitle>
+            <span class="font-weight-gray">
+              Hier ensteht gerade unsere neue Webseite
+            </span>
+          </template>
+          <v-card-text class="bg-surface-light pt-4">
+            <v-container>
+              <v-row align="center" justify="center" class="fill-height">
+                <p class="font-weight-gray">
+                  Gerne nehmen wir Ihre Anfragen jetzt schon entgegen!
+                </p>
+              </v-row>
+              <v-row align="center" justify="center" class="fill-height">
+                <p class="font-weight-gray">
+                  Sie können uns unter folgenden Kontaktdaten erreichen:
+                </p>
+              </v-row>
+              <v-row>
+                <v-col>
+                  <v-icon icon="mdi-email-edit-outline"></v-icon>
+                </v-col>
+                <v-col>
+                  <span class="font-weight-gray">info@kkl-fuehrer.de</span>
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col>
+                  <v-icon icon="mdi-cellphone"></v-icon>
+                </v-col>
+                <v-col>
+                  <span class="font-weight-gray">+49 173 4364670</span>
+                </v-col>
+              </v-row>
+            </v-container>
+          </v-card-text>
+        </v-card>
       </v-col>
     </v-row>
   </v-container>
