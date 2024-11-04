@@ -39,7 +39,7 @@ jobs:
         env:
           CI: true
           SITE_URL: ${{ inputs.site-url }}
-        run: l
+        run: I
             npm ci
             npm run build
 
