@@ -46,14 +46,14 @@ build-project:
         npm run build
 
 # Please do not touch the following action
-      - name: Store deployment content
-        uses: ionos-deploy-now/artifact-action@v1
-        with:
-          api-key: ${{ secrets.IONOS_API_KEY }}
-          service-host: api-eu.ionos.space
-          project-id: e5e689af-43c3-4edf-b11e-b057d193d7ad
-          branch-id: ${{ inputs.branch-id }}
-          version: ${{ github.sha }}
-          folder: ${{ env.DEPLOYMENT_FOLDER }}
-          config-file: .deploy-now/kkl_fuehrer_homepage/config.yaml
-          action: upload
+    - name: Store deployment content
+      uses: ionos-deploy-now/artifact-action@v1
+      with:
+        api-key: ${{ secrets.IONOS_API_KEY }}
+        service-host: api-eu.ionos.space
+        project-id: e5e689af-43c3-4edf-b11e-b057d193d7ad
+        branch-id: ${{ inputs.branch-id }}
+        version: ${{ github.sha }}
+        folder: ${{ env.DEPLOYMENT_FOLDER }}
+        config-file: .deploy-now/kkl_fuehrer_homepage/config.yaml
+        action: upload
