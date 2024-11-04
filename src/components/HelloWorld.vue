@@ -20,7 +20,7 @@
         >
           <template v-slot:title>
             <span class="font-weight-black">
-              Willkommen bei Kälte Klima Lüftungstechnik
+              Willkommen bei Kälte Klima Lüftungstechnik Führer
             </span>
           </template>
           <template v-slot:subtitle>
