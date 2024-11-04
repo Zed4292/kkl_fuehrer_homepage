@@ -18,42 +18,42 @@ env:
 
 jobs:
 # Please do not rename this job
-build-project:
+  build-project:
 
-  name: build kkllON
-  runs-on: ubuntu-latest
+    name: build kkllON
+    runs-on: ubuntu-latest
 
-  steps:
-    - name: checkout
-      uses: actions/checkout@v4
-      with: 
-        submodules: 'recursive'
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        with: 
+          submodules: 'recursive'
 
-    - name: Setup Node
-      uses: actions/setup-node@v4
-      with: 
-        node-version: v16.x
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with: 
+          node-version: v16.x
 
-    - name: Install dependencies
-      run: npm install # Install dependencies
+      - name: Install dependencies
+        run: npm install # Install dependencies
 
-    - name: Build Node assets
-      env:
-        CI: true
-        SITE_URL: ${{ inputs.site-url }}
-      run: |
-        npm ci
-        npm run build
+      - name: Build Node assets
+        env:
+          CI: true
+          SITE_URL: ${{ inputs.site-url }}
+        run: |
+          npm ci
+          npm run build
 
-# Please do not touch the following action
-    - name: Store deployment content
-      uses: ionos-deploy-now/artifact-action@v1
-      with:
-        api-key: ${{ secrets.IONOS_API_KEY }}
-        service-host: api-eu.ionos.space
-        project-id: e5e689af-43c3-4edf-b11e-b057d193d7ad
-        branch-id: ${{ inputs.branch-id }}
-        version: ${{ github.sha }}
-        folder: ${{ env.DEPLOYMENT_FOLDER }}
-        config-file: .deploy-now/kkl_fuehrer_homepage/config.yaml
-        action: upload
+  # Please do not touch the following action
+      - name: Store deployment content
+        uses: ionos-deploy-now/artifact-action@v1
+        with:
+          api-key: ${{ secrets.IONOS_API_KEY }}
+          service-host: api-eu.ionos.space
+          project-id: e5e689af-43c3-4edf-b11e-b057d193d7ad
+          branch-id: ${{ inputs.branch-id }}
+          version: ${{ github.sha }}
+          folder: ${{ env.DEPLOYMENT_FOLDER }}
+          config-file: .deploy-now/kkl_fuehrer_homepage/config.yaml
+          action: upload
