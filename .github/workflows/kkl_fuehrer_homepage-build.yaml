@@ -20,7 +20,7 @@ jobs:
 # Please do not rename this job
 build-project:
 
-  name: build kklION
+  name: build kkllON
   runs-on: ubuntu-latest
 
   steps:
