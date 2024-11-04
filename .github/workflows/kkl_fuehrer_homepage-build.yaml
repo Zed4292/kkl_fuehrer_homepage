@@ -19,7 +19,7 @@ env:
 jobs:
 # Please do not rename this job
   build-project:
-    name: build kkl_fuehrer_homepage
+    name: build kkllON
     runs-on: ubuntu-latest
     steps:
       - name: checkout
@@ -39,7 +39,9 @@ jobs:
         env:
           CI: true
           SITE_URL: ${{ inputs.site-url }}
-        run: npm run build
+        run: l
+            npm ci
+            npm run build
 
 # Please do not touch the following action
       - name: Store deployment content
