@@ -40,21 +40,13 @@
                   Sie können uns unter folgenden Kontaktdaten erreichen:
                 </p>
               </v-row>
-              <v-row>
-                <v-col>
-                  <v-icon icon="mdi-email-edit-outline"></v-icon>
-                </v-col>
-                <v-col>
-                  <span class="font-weight-gray">info@kkl-fuehrer.de</span>
-                </v-col>
+              <v-row align="center" justify="center" class="pt-4 fill-height">
+                <v-icon icon="mdi-email-edit-outline" class="pr-8"></v-icon>
+                <span class="font-weight-gray">info@kkl-fuehrer.de</span>
               </v-row>
-              <v-row>
-                <v-col>
-                  <v-icon icon="mdi-cellphone"></v-icon>
-                </v-col>
-                <v-col>
-                  <span class="font-weight-gray">+49 173 4364670</span>
-                </v-col>
+              <v-row align="center" justify="center" class="pt-4 fill-height">
+                <v-icon icon="mdi-cellphone" class="pr-8"></v-icon>
+                <span class="font-weight-gray">+49 173 4364670</span>
               </v-row>
             </v-container>
           </v-card-text>
