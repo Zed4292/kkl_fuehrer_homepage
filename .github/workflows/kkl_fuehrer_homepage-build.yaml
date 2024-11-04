@@ -30,13 +30,15 @@ build-project:
 
         uses: actions/checkout@v4
 
-        with: submodules: 'recursive'
+        with: 
+          submodules: 'recursive'
 
      - name: Setup Node
 
         uses: actions/setup-node@v4
 
-        with: node-version: v16.x
+        with: 
+          node-version: v16.x
 
      - name: Install dependencies
 
